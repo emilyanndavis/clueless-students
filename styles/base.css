@@ -1,0 +1,48 @@
+.rygBtn{
+    text-align: center;
+}
+
+.narrow{
+    margin: auto;
+    width: 60%;
+}
+
+input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+
+input[type=radio] + label {
+    display:inline-block;
+    margin: 0px -5px;
+    padding: 4px 12px;
+}
+
+input[type=radio]:checked + label{
+    background-image: none;
+    background-color: #555;
+}
+
+label[for=green]{
+    background-color: lightgreen;
+}
+
+input[type=radio]:checked + label[for=green]{
+    background-color: green;
+}
+
+label[for=yellow]{
+    background-color: lightyellow;
+}
+
+input[type=radio]:checked + label[for=yellow]{
+    background-color: yellow;
+}
+
+label[for=red]{
+    background-color: palevioletred;
+}
+
+input[type=radio]:checked + label[for=red]{
+    background-color: red;
+}
