@@ -1,0 +1,59 @@
+
+/*Elements*/
+html{
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+/*Classes*/
+.green{
+    border:2px solid#34ff00;
+}
+.precent{
+    width:25%;
+}
+.headerbar  {
+    color:white; 
+    background-color:#444;
+    font-family: 'Slabo 27px', serif;
+    margin:-5px;
+    height:15%;
+    padding:10%
+}
+.content{
+    background:white;
+    height: 100%;
+}
+
+.border-content{
+    /*border-left:  3px #a1a1a1 solid ;
+    border-right: 3px #a1a1a1 solid ;
+*/}
+.inch{
+    font-size: 144px;
+}
+
+.list-group-item{
+    display: inline-block;
+}
+.name{
+    font-size: 20px;
+    display: inline-block;
+}
+.color-block{
+    width:20px;
+    height:19px;
+    background: #34ff00;
+    display: inline-block;
+}
+.header{
+    background:white;
+}
+/*ID*/
+#box{
+    width:20%;
+    height: 20%;
+    padding:15px;
+    border-left:5px solid #444;
+}

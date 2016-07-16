@@ -8,7 +8,7 @@
 
     <!--Style Sheets-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="styles\base.css">
+    <link rel="stylesheet" href="styles/instructor.css">
 </head>
 
 <body>
@@ -21,89 +21,40 @@
     </form>
     <div id="topic-url"></div>
     <button id="load-data">Load Responses</button>
-    <div id="results"></div>
 </div>
 
 
-<!--<div class="container">
-    <section class="row">
-        <div id="box"><h1>15%</h1></div>
-    </section>
-    <div class="row">
-        <section id="content" class="content col-md-offset-2 col-md-8 border-content text-center">
-    <section class="row">
-        <div id="percent" class="text-center" >
-            <p class="inch">50%</p>
+<div class="container">
+    <section id="header" class="row">
+        <div id="box">
+            <h1 class="inch">50%</h1>
         </div>
     </section>
     <hr>
     <section class="row">
-        <div id="stat">
-            <h3>Student's Responses: </h3>
-            <ul class="list-group">
-                <section class="row">
-                      <li class="list-group-item name" style="width:200px;">
-                    <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-
-                    <li class="list-group-item name" style="width:200px;">
-                        <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-                </section>
-                 <section class="row">
-                      <li class="list-group-item name" style="width:200px;">
-                    <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-
-                    <li class="list-group-item name" style="width:200px;">
-                        <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-                </section>
-                 <section class="row">
-                      <li class="list-group-item name" style="width:200px;">
-                    <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-
-                    <li class="list-group-item name" style="width:200px;">
-                        <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-                </section>
-                 <section class="row">
-                      <li class="list-group-item name" style="width:200px;">
-                    <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-
-                    <li class="list-group-item name" style="width:200px;">
-                        <div class="name">Celeste</div><div class="color-block"></div>
-                    </li>
-                </section>
+        <div id="student-response" class="text-center">
+            <h3>Class Responses</h3>
+            <ul class="list-group row" id="response-list">
+               
+                <li class="list-group-item green col-md-offset-2 col-md-4"><div class="glyphicon glyphicon-thumbs-up"></div> Student</li>
+                <li class="list-group-item green col-md-4"><div class="glyphicon glyphicon-thumbs-up"></div> Student</li>
+                
+                <li class="list-group-item green col-md-offset-2 col-md-4"><div class="glyphicon glyphicon-thumbs-up"></div> Student</li>
+                <li class="list-group-item green col-md-4"><div class="glyphicon glyphicon-thumbs-up"></div> Student</li>
             </ul>
         </div>
     </section>
-    <hr>
-        <section class="row">
-            <div id="wordmap">
-                <h3>Map of Trouble Tags:</h3>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </section>
-            
-        </section>
-    </div>
-</div>-->
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 <script src="scripts/factory.js"></script>
 <script src="scripts/instructor-service.js"></script>
-<script src="/scripts/instructor-view-controller.js"></script>
+<script src="scripts/instructor-view-controller.js"></script>
  <!--DONT TOUCH THIS SCRIPT -->
         <script  type="text/javascript">
-            var i= 66;
-            
+            var i=75;
                 console.log("after")
                 $('#box').css( "margin-left", i+"%")
                 if (i>0 && i<=33.3){
@@ -115,6 +66,6 @@
                 if (i>66.6 && i<=100){
                     $('#box').css("background","green")
                 }
-            
+                
         </script>
 </html>

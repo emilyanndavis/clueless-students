@@ -12,12 +12,16 @@ function InstructorService() {
 
     var responseListRef = db.ref(baseUrl);
 
-    this.getUrl = function(id) {
+    this.getStudentUrl = function(id) {
         return '127.0.0.1:8080?id=' + id; 
     };
 
+    this.getInstructorUrl = function(id) {
+        return '127.0.0.1:8080/instructor.html?id=' + id; 
+    };
+    
     this.saveTopic = function(topic) {
-       var topicRef = db.ref('/topics-list/').push();
+        var topicRef = db.ref('/topics-list/').push();
        var x = {
            topic: topic
        }
@@ -33,6 +37,7 @@ function InstructorService() {
     }
 
     this.getResponses = function(callback) {
+        debugger;
         responseList(baseUrl).on('value', function(snapshot){
             callback(snapshot.val());
         });

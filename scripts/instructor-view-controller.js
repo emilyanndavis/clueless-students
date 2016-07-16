@@ -12,13 +12,25 @@
         console.log(id);
         $('#topic-url').replaceWith(
             `<h2>Send this URL to the students!</h2>
-            <h3>${is.getUrl(id)}</h3>`);
+            <h3>${is.getStudentUrl(id)}</h3>
+            <h2>Go to this URL to see the responses:</h2>
+            <h3>${is.getInstructorUrl(id)}</h3>`);
     });
 
     $('#load-data').on('click', function(){
         is.getResponses(function(responses){
             console.log(responses);
-            // $('#results').replaceWith(``);
+            $('#response-list').empty();
+            for (var name in responses) {
+                var response = responses[name];
+                console.log(response.studentName);
+                console.log(response.status);
+                $('#response-list').append(`
+                    <li class="list-group-item green col-md-offset-2 col-md-4">
+                        <div class="glyphicon glyphicon-thumbs-up"></div>
+                     ${response.studentName}: ${response.status}</li>
+                `);
+            }
         });
     });
 
