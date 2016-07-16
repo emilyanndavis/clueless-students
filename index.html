@@ -13,7 +13,11 @@
 <body>
     <div class="container-fluid">
         <div class="row status-buttons">
-            <form id="studentForm">
+            <form id="student-form">
+                <div class="student-name text-center">
+                    <label for="studentName">Enter your name</label>
+                    <input type="text" name="studentName">
+                </div>
                 <div class="radio">
                     <input type="radio" name="status" id="green" value="green">
                     <label class="radio-inline" for="green">
@@ -31,7 +35,7 @@
                     </label>
                 </div>
                 <div class="comment-box">
-                    <textarea class="form-control" rows="4" placeholder="Comments/Questions"></textarea>
+                    <textarea class="form-control" rows="4" name="comments" placeholder="Comments/Questions"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
