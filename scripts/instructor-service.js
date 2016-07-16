@@ -36,12 +36,18 @@ function InstructorService() {
         return db.ref(baseUrl);
     }
 
-    this.getResponses = function(callback) {
-        debugger;
+    this.getResponses = function(id, callback) {
+        makeUrl(id);
         responseList(baseUrl).on('value', function(snapshot){
             callback(snapshot.val());
         });
     };
+
+    this.getAllTopics = function(callback){
+        db.ref('/topics-list/').on('value', function(snapshot){
+            callback(snapshot.val());            
+        });
+    }
 
 }
 

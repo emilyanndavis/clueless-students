@@ -16,7 +16,6 @@ li{
 .headerbar  {
     color:white; 
     background-color:#444;
-    font-family: 'Slabo 27px', serif;
     margin:-5px;
     height:15%;
     padding:10%
@@ -26,16 +25,14 @@ li{
     height: 100%;
 }
 
-.border-content{
-    /*border-left:  3px #a1a1a1 solid ;
-    border-right: 3px #a1a1a1 solid ;
-*/}
 .inch{
     font-size: 144px;
 }
 
 .list-group-item{
     display: inline-block;
+    border: 1px solid #444;
+    border-radius: 5px;
 }
 .name{
     font-size: 20px;

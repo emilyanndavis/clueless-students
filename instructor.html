@@ -13,24 +13,30 @@
 
 <body>
        
-<div class="container" id="prompt">
+<button type="button" class="btn btn-primary" id="new-topic-btn">New Topic</button>
+<button type="button" class="btn btn-primary" id="results-btn">Show Results</button>
+<button type="button" class="btn btn-info" id="prev-topics-btn">Show Previous Topics</button>
+
+<div class="container hidden" id="prompt">
     <form id="prompt-form">
         <label for="topic">What are we talking about today?</label>
         <input type="text" name="topic">
         <button type="submit" class="btn btn-primary">Generate URL</button>
     </form>
     <div id="topic-url"></div>
-    <button id="load-data">Load Responses</button>
 </div>
 
 
-<div class="container">
+<div id="prev-topics">
+    testing!
+</div>
+
+<div class="container hidden" id="results">
     <section id="header" class="row">
         <div id="box">
-            <h1 class="inch">50%</h1>
+            <h1 class="inch"></h1>
         </div>
     </section>
-    <hr>
     <section class="row">
         <div id="student-response" class="text-center">
             <h3>Class Responses</h3>
@@ -44,6 +50,14 @@
             </ul>
         </div>
     </section>
+    <section class="row">
+        <div class="text-center" >
+            <h3>Comments</h3>
+            <div id="comments">
+                <span class="label label-default">Default</span>
+            </div>
+        </div>
+    </section>    
 </div>
 
 </body>
@@ -54,18 +68,7 @@
 <script src="scripts/instructor-view-controller.js"></script>
  <!--DONT TOUCH THIS SCRIPT -->
         <script  type="text/javascript">
-            var i=75;
-                console.log("after")
-                $('#box').css( "margin-left", i+"%")
-                if (i>0 && i<=33.3){
-                    $('#box').css("background","red")
-                };
-                if (i>33.3 && i<=66.6){
-                    $('#box').css("background","yellow")
-                }
-                if (i>66.6 && i<=100){
-                    $('#box').css("background","green")
-                }
+
                 
         </script>
 </html>
