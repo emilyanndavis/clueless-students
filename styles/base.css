@@ -1,9 +1,9 @@
-.rygBtn{
+.status-buttons {
     text-align: center;
 }
 
-.narrow{
-    margin: auto;
+.comment-box {
+    margin: 20px auto;
     width: 60%;
 }
 
@@ -14,8 +14,9 @@ input[type=radio] {
 
 input[type=radio] + label {
     display:inline-block;
-    margin: 0px -5px;
-    padding: 4px 12px;
+    margin: 0px 5px;
+    padding: 6px 12px;
+    border-radius: 5px;
 }
 
 input[type=radio]:checked + label{
@@ -24,25 +25,27 @@ input[type=radio]:checked + label{
 }
 
 label[for=green]{
-    background-color: lightgreen;
+    background-color: #34ff00;
 }
 
 input[type=radio]:checked + label[for=green]{
-    background-color: green;
+    background-color: #1C8700;
 }
 
 label[for=yellow]{
-    background-color: lightyellow;
+    background-color: #f5f52a;
 }
 
 input[type=radio]:checked + label[for=yellow]{
-    background-color: yellow;
+    background-color: #f5b92a;
 }
 
 label[for=red]{
-    background-color: palevioletred;
+    background-color: #ff0d01;
 }
 
 input[type=radio]:checked + label[for=red]{
-    background-color: red;
+    background-color: #aa0a01;
 }
+
+
