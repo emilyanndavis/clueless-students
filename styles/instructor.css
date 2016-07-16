@@ -54,3 +54,17 @@ li{
     padding:15px;
     border-left:5px solid #444;
 }
+
+.prompt-form {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.topics-list {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.results {
+    padding: 20px;
+}

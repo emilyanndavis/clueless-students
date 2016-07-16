@@ -16,26 +16,29 @@
         var status = form.status.value;
         var comment = form.comments.value;
         var response = new Response(name, status, comment);
-        console.log(response);
         rs.saveResponse(response);
     });
 
     // Require comment field if red button is selected
     $('input[name=status]').on('click', function(event){
         if ($(event.target).filter('#red').length) {
-            console.log('checked');
             $('#comment-field').prop('required', true);    
         } else {
-            console.log('unchecked');
             $('#comment-field').removeAttr('required');                
         }
-        console.log('huh?');
     });
 
-    // Do something when break button is pushed
-    $('#break-btn').on('click', function(){
-        var breakNeeded = true;
-        console.log(breakNeeded);
-    });
+    rs.getTopic(showTopic)
+
+    function showTopic(topic){
+        $('#prompt').text(`${topic}`);
+
+    }
+
+    // // Do something when break button is pushed
+    // $('#break-btn').on('click', function(){
+    //     var breakNeeded = true;
+    //     console.log(breakNeeded);
+    // });
 
 })();

@@ -34,12 +34,12 @@
         for (var id in topics) {
             var topic = topics[id];
             $('#prev-topics').prepend(`
-                <h1 id="${topic.id}">${topic.topic}</h1>
+            <button type="button" class="list-group-item" id="${topic.id}">${topic.topic}</button>
             `);
         }
     });
 
-    $('#prev-topics').on('click', 'h1', function(){
+    $('#prev-topics').on('click', 'button', function(){
         var id = this.id;
         is.getResponses(id, drawResponses);
     });
@@ -70,12 +70,12 @@
             console.log(response.status);
             $('#response-list').append(`
                 <li class="list-group-item col-md-offset-2 col-md-4">
-                    ${response.studentName}: ${response.status}</li>
+                    <p>${response.studentName}: ${response.status}</p>
+                    <p>${response.comment}<p></li>
             `);
         }
         var totalResponses = Object.keys(responses).length;
         var avg = i/totalResponses * 100;
-        debugger;
         $('#box').css( "width", avg.toFixed()+"%")
         if (avg>=0 && avg<=33.3){
             $('#box').css("background","red")
