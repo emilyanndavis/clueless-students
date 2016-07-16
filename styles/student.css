@@ -22,8 +22,8 @@ input[type=radio] {
 
 input[type=radio] + label {
     display:inline-block;
-    margin: 0px 5px;
-    padding: 6px 12px;
+    margin: 0px -2px;
+    padding: 4px 12px;
     border-radius: 5px;
 }
 
