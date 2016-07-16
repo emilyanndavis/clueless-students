@@ -12,10 +12,11 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row status-buttons">
+        <div class="row text-center">
+            <div id="prompt">[Placeholder text for prompt from instructor]</div>
             <form id="student-form">
                 <div class="student-name text-center">
-                    <label for="studentName">Enter your name</label>
+                    <label for="studentName">Enter your name:</label>
                     <input type="text" name="studentName">
                 </div>
                 <div class="radio">
@@ -35,10 +36,11 @@
                     </label>
                 </div>
                 <div class="comment-box">
-                    <textarea class="form-control" rows="4" name="comments" placeholder="Comments/Questions"></textarea>
+                    <textarea class="form-control" rows="4" name="comments" id="comment-field" placeholder="Comments/Questions"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <button type="submit" class="btn btn-info" id="break-btn">I need a break!</button>
         </div>
     </div>
 
