@@ -28,11 +28,11 @@
         }
     });
 
-    rs.getTopic(showTopic)
+    rs.getTopic(showTopic);
 
     function showTopic(topic){
-        $('#prompt').text(`${topic}`);
-
+        $('#prompt').empty();
+        $('#prompt').append(`How are you feeling about <strong>${topic}</strong>?`);
     }
 
     // // Do something when break button is pushed

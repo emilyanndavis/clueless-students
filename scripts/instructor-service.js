@@ -5,12 +5,11 @@ function InstructorService() {
     var db = firebase.db;
     var currentKey;
     var baseUrl;
+    var responseListUrl;
 
     function makeUrl(currentKey) {
-        baseUrl = '/topics-list/' + currentKey + '/responses/';
-    };
-
-    var responseListRef = db.ref(baseUrl);
+        baseUrl = '/topics-list/' + currentKey;
+    };    
 
     this.getStudentUrl = function(id) {
         return '127.0.0.1:8080?id=' + id; 
@@ -22,26 +21,33 @@ function InstructorService() {
     
     this.saveTopic = function(topic) {
         var topicRef = db.ref('/topics-list/').push();
-       var x = {
-           topic: topic
-       }
-       x.id = topicRef.key
-       topicRef.set(x);
-       currentKey = x.id;
-       makeUrl(currentKey);
-       return x.id;
+        var x = {
+            topic: topic
+        }
+        x.id = topicRef.key
+        topicRef.set(x);
+        currentKey = x.id;
+        makeUrl(currentKey);
+        return x.id;
     };
 
     function responseList(baseUrl) {
-        return db.ref(baseUrl);
+        responseListUrl = baseUrl + '/responses/';
+        return db.ref(responseListUrl);
     }
 
     this.getResponses = function(id, callback) {
-        makeUrl(id);
+        makeUrl(id);  
         responseList(baseUrl).on('value', function(snapshot){
             callback(snapshot.val());
         });
     };
+
+    this.getTopic = function(cb){
+        db.ref(baseUrl).on('value', function(snapshot){
+            cb(snapshot.val().topic);
+        });
+    }    
 
     this.getAllTopics = function(callback){
         db.ref('/topics-list/').on('value', function(snapshot){
