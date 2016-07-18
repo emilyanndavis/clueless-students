@@ -28,11 +28,17 @@
         }
     });
 
+    // Show topic
     rs.getTopic(showTopic);
-
+    
     function showTopic(topic){
         $('#prompt').empty();
-        $('#prompt').append(`How are you feeling about <strong>${topic}</strong>?`);
+        if (topic == undefined) {
+            $('#prompt').append(`<h2 class="url-error">Uh oh, it looks like you're trying to access a topic that doesn't exist. Check your URL and try again.</h2>`);
+            $('form').addClass('hidden');
+            return;
+        } 
+        $('#prompt').append(`<h2>How are you feeling about <strong>${topic}</strong>?</h2>`);
     }
 
     // // Do something when break button is pushed

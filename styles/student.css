@@ -1,18 +1,32 @@
 .container-fluid {
-    padding-top: 40px;
+    padding: 40px 0px;
 }
 
-form {
-    padding-bottom: 30px;
+.prompt {
+    padding-bottom: 20px;
+    max-width: 60%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.prompt .url-error {
+    font-size: 20px;
 }
 
 .student-name {
     margin: 20px auto;
+    font-size: 22px;
 }
 
 .comment-box {
     margin: 20px auto;
     width: 60%;
+    font-size: 18px;
+}
+
+.comment-box label {
+    margin: 40px auto 20px auto;
 }
 
 input[type=radio] {
@@ -22,9 +36,10 @@ input[type=radio] {
 
 input[type=radio] + label {
     display:inline-block;
-    margin: 0px -2px;
-    padding: 4px 12px;
+    margin: 4px 0px;
+    padding: 12px 20px;
     border-radius: 5px;
+    font-size: 18px;
 }
 
 input[type=radio]:checked + label{
@@ -37,7 +52,8 @@ label[for=green]{
 }
 
 input[type=radio]:checked + label[for=green]{
-    background-color: #1C8700;
+    background-color: #34ff00;
+    border: 5px solid #1c8700;
 }
 
 label[for=yellow]{
@@ -45,15 +61,18 @@ label[for=yellow]{
 }
 
 input[type=radio]:checked + label[for=yellow]{
-    background-color: #f5b92a;
+    background-color: #f5f52a;
+    border: 5px solid #f5b92a;
 }
 
 label[for=red]{
     background-color: #ff0d01;
+    color: #fff;
 }
 
 input[type=radio]:checked + label[for=red]{
-    background-color: #aa0a01;
+    border: 5px solid #aa0a01;
+    background-color: #ff0d01;
 }
 
 

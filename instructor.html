@@ -11,80 +11,80 @@
     <link rel="stylesheet" href="styles/instructor.css">
 </head>
 
-<body>
+    <body>
 
-<!--Logo Header       -->
-<div class="container logo-container">
-    <section class="row">
-        <div id="logo" class="text-center">
-            <img src="assets/images/logo.png" alt="narwhal taco question-mark">
-        </div>
-    </section>    
-</div>
-
-<!--Main Buttons-->
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <button type="button" class="btn btn-primary btn-block btn-lg" id="new-topic-btn">Create New Topic</button>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-            <button type="button" class="btn btn-primary btn-block btn-lg" id="results-btn">Show/Hide Results</button>      
-        </div>
-        <div class="col-xs-12 col-sm-4">
-            <button type="button" class="btn btn-primary btn-block btn-lg" id="prev-topics-btn">Show/Hide Topics</button>        
-        </div>
+    <!--Logo Header-->
+    <div class="container logo-container">
+        <section class="row">
+            <div id="logo" class="text-center">
+                <img src="assets/images/logo.png" alt="narwhal taco question-mark">
+            </div>
+        </section>    
     </div>
-</div>
 
-<!--New Topic Form-->
-<div class="container hidden" id="prompt">
-    <form id="prompt-form" class="text-center prompt-form">
-        <label for="topic">What are we talking about today?</label>
-        <input type="text" name="topic">
-        <button type="submit" class="btn btn-info btn-lg">Generate URL</button>
-    </form>
-    <div id="topic-url"></div>
-</div>
-
-<!--List of Previous Topics-->
-<div class="list-group topics-list" id="prev-topics">
-  
-</div>
-
-<!--Student Responses to a Selected Topic-->
-<div class="container hidden results" id="results">
-    <section id="header" class="row">
-        <div id="results-header" class="text-center">
-
-        </div>
-        <div id="box">
-            <h1 class="inch"></h1>
-        </div>
-    </section>
-    <section class="row">
-        <div id="student-response" class="text-center">
-            <ul class="list-group row" id="response-list">
-               
-            </ul>
-        </div>
-    </section>
-    <!-- Placeholder for tags display -->
-    <!--<section class="row">
-        <div class="text-center" >
-            <h3>Comments</h3>
-            <div id="comments">
-                <span class="label label-default">Default</span>
+    <!--Main Buttons-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <button type="button" class="btn btn-primary btn-block btn-lg" id="new-topic-btn">Create New Topic</button>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <button type="button" class="btn btn-primary btn-block btn-lg" id="results-btn">Show/Hide Results</button>      
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <button type="button" class="btn btn-primary btn-block btn-lg" id="prev-topics-btn">Show/Hide Topics</button>        
             </div>
         </div>
-    </section>    -->
-</div>
+    </div>
 
-</body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-<script src="scripts/factory.js"></script>
-<script src="scripts/instructor-service.js"></script>
-<script src="scripts/instructor-view-controller.js"></script>
-<script type="text/javascript"></script>
+    <!--New Topic Form-->
+    <div class="container hidden" id="prompt">
+        <form id="prompt-form" class="text-center prompt-form">
+            <label for="topic">What are we talking about today?</label>
+            <input type="text" name="topic">
+            <button type="submit" class="btn btn-info btn-lg">Generate URL</button>
+        </form>
+        <div id="topic-url"></div>
+    </div>
+
+    <!--List of Previous Topics-->
+    <div class="list-group topics-list" id="prev-topics">
+    
+    </div>
+
+    <!--Student Responses to a Selected Topic-->
+    <div class="container hidden results" id="results">
+        <section id="header" class="row">
+            <div id="results-header" class="text-center">
+
+            </div>
+            <div id="box">
+                <h1 class="inch"></h1>
+            </div>
+        </section>
+        <section class="row">
+            <div id="student-response" class="text-center">
+                <ul class="list-group row" id="response-list">
+                
+                </ul>
+            </div>
+        </section>
+        <!-- Placeholder for tags display -->
+        <!--<section class="row">
+            <div class="text-center" >
+                <h3>Tags</h3>
+                <div id="tags">
+                    <span class="label label-default">Tag Name</span>
+                </div>
+            </div>
+        </section>    -->
+    </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="scripts/factory.js"></script>
+    <script src="scripts/instructor-service.js"></script>
+    <script src="scripts/instructor-view-controller.js"></script>
+    <script type="text/javascript"></script>
 </html>

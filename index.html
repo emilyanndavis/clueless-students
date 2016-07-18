@@ -16,32 +16,41 @@
     </div>    
     <div class="container-fluid">
         <div class="row text-center">
-            <div id="prompt">[Placeholder text for prompt from instructor]</div>
+            <div id="prompt" class="prompt"></div>
             <form id="student-form">
                 <div class="student-name text-center">
-                    <label for="studentName">Enter your name:</label>
-                    <input type="text" name="studentName">
+                    <label for="studentName">Your name:</label>
+                    <input type="text" name="studentName" required>
                 </div>
-                <div class="radio">
-                    <input type="radio" name="status" id="green" value="green">
-                    <label class="radio-inline" for="green">
-                        I totally get it
-                    </label>
-                
-                    <input type="radio" name="status" id="yellow" value="yellow">
-                    <label class="radio-inline" for="yellow">
-                        I'm struggling
-                    </label>
-                
-                    <input type="radio" name="status" id="red" value="red">
-                    <label class="radio-inline" for="red">
-                        I'm completely lost
-                    </label>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="row">
+                        <div class="radio">
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="radio" name="status" id="green" value="green">
+                                <label class="radio-inline" for="green">
+                                    I totally get it
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">                
+                                <input type="radio" name="status" id="yellow" value="yellow">
+                                <label class="radio-inline" for="yellow">
+                                    I'm struggling
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="radio" name="status" id="red" value="red">
+                                <label class="radio-inline" for="red">
+                                    I'm completely lost
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="comment-box">
-                    <textarea class="form-control" rows="4" name="comments" id="comment-field" placeholder="Comments/Questions"></textarea>
+                    <label for="comments">Do you have a question or a specific concept you're struggling with?</label>
+                    <textarea class="form-control" rows="4" name="comments" id="comment-field" placeholder="Examples: 'What the heck is a prototype?', 'I need more practice with callbacks', 'Why are narwhals causing a commotion?'"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg">Submit Your Response</button>
             </form>
             <!--<button type="submit" class="btn btn-info" id="break-btn">I need a break!</button>-->
         </div>

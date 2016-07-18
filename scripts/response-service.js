@@ -16,7 +16,11 @@ function ResponseService() {
 
     this.getTopic = function(cb){
         db.ref('/topics-list/' + topicId).on('value', function(snapshot){
-            cb(snapshot.val().topic);
+            if (snapshot.val() == undefined) {
+                cb(undefined);
+            } else {
+                cb(snapshot.val().topic);
+            }
         });
     }
 
@@ -25,6 +29,5 @@ function ResponseService() {
             callback(snapshot.val());
         });
     }
-
 
 }
