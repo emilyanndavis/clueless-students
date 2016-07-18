@@ -12,6 +12,8 @@
             `<h2>Send this URL to the students!</h2>
             <h3>${is.getStudentUrl(id)}</h3>
         `);
+        is.getResponses(id, drawResponses);
+        $('#prompt').removeClass('hidden');
     });
 
     // Toggle display of new topic form
